@@ -49,16 +49,15 @@ The Sustainability and Resource Optimization System is a full-stack IoT-based ap
 
 ## System Architecture
 
-- Sensors
--  ↓
-- ESP32
--  ↓
-- Backend (Node.js)
--  ├── MongoDB (application data)
--  ├── InfluxDB (sensor data) → Grafana (dashboard)
--  └── Frontend (React)
-
-
+```mermaid
+graph TD
+    A[Sensors] --> B[ESP32]
+    B --> C["Backend - Node.js"]
+    C --> D["MongoDB - application data"]
+    C --> E["InfluxDB - sensor data"]
+    E --> F["Grafana - dashboard"]
+    C --> G["Frontend - React"]
+```
 ---
 
 ## Modules
